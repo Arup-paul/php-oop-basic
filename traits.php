@@ -1,49 +1,39 @@
 <?php
 
+trait Php {
+    public function PhpCoder() {
+        return "I Love PHP</br>";
 
-
-trait Java{
-  public function javaCoder(){
-      return "I love Java.</br>";
-  }
+    }
 }
 
+// trait Java {
+//     public function JavaCoder() {
+//         return "I Love Java</br>";
 
-
-// trait php{
-//     public function phpCoder(){
-//         return "I Love Php.</br>";
 //     }
-// }
-
+// // }
 // trait JavaPhp{
-//     use Java, php;
+//   use Java,Php;
 // }
 
+class CoderOne {
+    use Php;
+    public function PhpCoder() {
+      return "I Love PHP laravel</br>";
 
+  }
 
-class CoderOne{
-   use Java;
-   public function javaCoders(){
-    return "I love Php.</br>";
 }
-}
 
+// class coderTwo {
+//     use Php;
+// }
 
-
-
-
-$c1 = new CoderOne();
-echo $c1->javaCoder();
-echo $c1->javaCoders();
-//echo $c1->phpCoder();
-
-
-
-
-
-
-
-
+$c1 = new CoderOne;
+echo $c1->PhpCoder();
+//echo $c1->PhpCoder();
+// $c2 = new coderTwo;
+// echo $c2->PhpCoder();
 
 ?>
